@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formação Completa em Injetáveis — GUIA-DOR Inject Therapy</title>
+  <meta name="description" content="Formação presencial de 6 dias para fisioterapeutas que querem atuar com injetáveis com raciocínio clínico, segurança farmacológica e protocolo estruturado.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════════════
+       DESIGN TOKENS — BRANDBOOK GUIA-DOR v1.0
+    ═══════════════════════════════════════════════ */
+    :root {
+      --navy:       #0A1628;
+      --navy-mid:   #0F1E35;
+      --navy-light: #162236;
+      --teal:       #1A9E8B;
+      --teal-light: #22C4AE;
+      --teal-dim:   rgba(26,158,139,.15);
+      --green:      #16C784;
+      --amber:      #E8A838;
+      --cobalt:     #1565C0;
+      --cobalt-l:   #1E88E5;
+      --charcoal:   #1A202C;
+      --slate:      #4A5568;
+      --ice:        #F7FAFC;
+      --frost:      #EDF2F7;
+      --white:      #FFFFFF;
+      --font-display: 'Montserrat', sans-serif;
+      --font-body:    'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+    }
+
+    /* ═══ RESET & BASE ═══ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--ice);
+      color: var(--charcoal);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ═══ TYPOGRAPHY ═══ */
+    .display-xl {
+      font-family: var(--font-display);
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+    }
+    .heading-1 {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+    }
+    .heading-2 {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .heading-3 {
+      font-family: var(--font-display);
+      font-size: clamp(17px, 2vw, 22px);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+    .label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .body-lg { font-size: 18px; line-height: 1.7; }
+    .body    { font-size: 16px; line-height: 1.65; }
+    .body-sm { font-size: 14px; line-height: 1.6; }
+
+    /* ═══ LAYOUT ═══ */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section { padding: 96px 0; }
+    .section-sm { padding: 64px 0; }
+    .section-dark {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .section-mid {
+      background: var(--navy-mid);
+      color: var(--white);
+    }
+    .section-light {
+      background: var(--ice);
+      color: var(--charcoal);
+    }
+    .section-frost {
+      background: var(--frost);
+      color: var(--charcoal);
+    }
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--teal);
+      border-radius: 2px;
+      margin: 16px 0 28px;
+    }
+    .divider-center { margin: 16px auto 28px; }
+    .text-center { text-align: center; }
+    .text-teal  { color: var(--teal); }
+    .text-teal-l { color: var(--teal-light); }
+    .text-green { color: var(--green); }
+    .text-amber { color: var(--amber); }
+    .text-cobalt { color: var(--cobalt-l); }
+    .text-muted { color: var(--slate); }
+    .text-muted-light { color: rgba(255,255,255,.5); }
+
+    /* ═══ COMPONENTS ═══ */
+
+    /* Noise grain */
+    .grain::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: .025;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    /* Logo */
+    .logo {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      text-decoration: none;
+    }
+    .logo-wordmark {
+      display: inline-flex;
+      align-items: baseline;
+      font-family: var(--font-display);
+      font-weight: 900;
+      letter-spacing: -0.025em;
+      line-height: 1;
+    }
+    .logo-o {
+      position: relative;
+      display: inline-block;
+    }
+    .logo-o-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 2.5px solid var(--cobalt);
+      top: -3px; left: -2px; right: -2px; bottom: -4px;
+      pointer-events: none;
+    }
+    .logo-tagline {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+    }
+
+    /* Badge pill */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge-teal   { background: rgba(26,158,139,.2); color: var(--teal-light); }
+    .badge-green  { background: rgba(22,199,132,.15); color: var(--green); }
+    .badge-amber  { background: rgba(232,168,56,.15); color: var(--amber); }
+    .badge-cobalt { background: rgba(21,101,192,.2); color: var(--cobalt-l); }
+    .badge-white  { background: rgba(255,255,255,.1); color: rgba(255,255,255,.85); }
+
+    /* Button */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 36px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      cursor: pointer;
+      transition: all .2s ease;
+      border: none;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+    }
+    .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
+    .btn-cta {
+      background: var(--green);
+      color: var(--navy);
+    }
+    .btn-cta:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,.3);
+    }
+    .btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+    .btn-lg { padding: 20px 48px; font-size: 17px; }
+    .btn-full { width: 100%; }
+
+    /* Card */
+    .card {
+      background: var(--white);
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+    .card-dark {
+      background: var(--navy-light);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+    .card-teal {
+      background: rgba(26,158,139,.08);
+      border: 1px solid rgba(26,158,139,.2);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+
+    /* Check list */
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .check-list li::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border-radius: 50%;
+      background: var(--green);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 2px;
+    }
+
+    /* Step */
+    .step-row { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Grid */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+    /* Stat */
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--teal-light);
+    }
+
+    /* Orb decorativo */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* ═══════════════════════════════════════
+       HEADER / NAV
+    ═══════════════════════════════════════ */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,22,40,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .logo-wordmark { font-size: 22px; }
+    .logo-tagline  { font-size: 8px; }
+    .header-badge {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--teal-light);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════ */
+    .hero {
+      background: var(--navy);
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-orb-1 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(26,158,139,.12) 0%, transparent 70%);
+      top: -100px; right: -100px;
+    }
+    .hero-orb-2 {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(21,101,192,.1) 0%, transparent 70%);
+      bottom: -50px; left: -50px;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-text { }
+    .hero-photo-wrap {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      height: 520px;
+      box-shadow: 0 32px 80px rgba(0,0,0,.5);
+    }
+    .hero-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .hero-photo-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(10,22,40,.6) 100%);
+    }
+    @media (max-width: 860px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-photo-wrap { height: 320px; }
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .hero-line { width: 32px; height: 2px; background: var(--teal); border-radius: 1px; }
+    .hero-title { color: var(--white); margin-bottom: 12px; }
+    .hero-title span { color: var(--teal-light); }
+    .hero-sub {
+      font-family: var(--font-display);
+      font-size: clamp(18px, 2.5vw, 26px);
+      font-weight: 600;
+      color: rgba(255,255,255,.75);
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+    .hero-desc {
+      font-size: 17px;
+      color: rgba(255,255,255,.6);
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-note {
+      font-size: 13px;
+      color: rgba(255,255,255,.4);
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,.06);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 64px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,.03);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--teal-light);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .hero-stat-label {
+      font-size: 13px;
+      color: rgba(255,255,255,.5);
+      line-height: 1.4;
+    }
+
+    /* ═══════════════════════════════════════
+       SELEÇÃO
+    ═══════════════════════════════════════ */
+    .selecao-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+      margin-top: 48px;
+    }
+    .selecao-box {
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+    .selecao-box-yes {
+      background: rgba(26,158,139,.08);
+      border: 1.5px solid rgba(26,158,139,.25);
+    }
+    .selecao-box-no {
+      background: rgba(255,255,255,.03);
+      border: 1.5px solid rgba(255,255,255,.08);
+    }
+    .selecao-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .selecao-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .selecao-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; line-height: 1.5; }
+    .dot-green { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: var(--green); margin-top: 5px; }
+    .dot-muted { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: rgba(255,255,255,.2); margin-top: 5px; }
+
+    /* ═══════════════════════════════════════
+       PROGRAMA
+    ═══════════════════════════════════════ */
+    .programa-header { margin-bottom: 48px; }
+    .pilares-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .pilar-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius-md);
+      padding: 24px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .pilar-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--teal);
+    }
+    .pilar-num {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+    .pilar-name {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .pilar-desc { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.5; }
+
+    /* Módulos timeline */
+    .modulos { display: flex; flex-direction: column; gap: 0; }
+    .modulo-item {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 0;
+      position: relative;
+    }
+    .modulo-item:not(:last-child) .modulo-line {
+      position: absolute;
+      left: 27px;
+      top: 56px;
+      bottom: 0;
+      width: 2px;
+      background: rgba(26,158,139,.2);
+    }
+    .modulo-num-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 4px;
+    }
+    .modulo-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--navy-light);
+      border: 2px solid var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--teal-light);
+      flex-shrink: 0;
+    }
+    .modulo-content {
+      padding: 4px 0 40px 20px;
+    }
+    .modulo-tag {
+      display: inline-flex;
+      padding: 3px 10px;
+      background: var(--teal-dim);
+      border-radius: 100px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 8px;
+    }
+    .modulo-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .modulo-desc { font-size: 14px; color: rgba(255,255,255,.55); line-height: 1.6; }
+
+    /* ═══════════════════════════════════════
+       EXPERT
+    ═══════════════════════════════════════ */
+    .expert-grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .expert-img-wrap {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: var(--navy-mid);
+    }
+    .expert-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .expert-img-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      right: 24px;
+      background: rgba(10,22,40,.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+    }
+    .expert-credentials { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
+    .expert-cred {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius-sm);
+    }
+    .expert-cred-icon {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 8px;
+      background: var(--teal-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    .expert-cred-text { font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.4; }
+    .expert-cred-text strong { display: block; font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 2px; }
+
+    /* ═══════════════════════════════════════
+       PROCESSO
+    ═══════════════════════════════════════ */
+    .processo-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .processo-card {
+      background: var(--white);
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      position: relative;
+    }
+    .processo-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+    .processo-card:nth-child(1)::before { background: var(--teal); }
+    .processo-card:nth-child(2)::before { background: var(--cobalt); }
+    .processo-card:nth-child(3)::before { background: var(--green); }
+    .processo-num {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--frost);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .processo-card:nth-child(1) .processo-num { color: rgba(26,158,139,.12); }
+    .processo-card:nth-child(2) .processo-num { color: rgba(21,101,192,.1); }
+    .processo-card:nth-child(3) .processo-num { color: rgba(22,199,132,.1); }
+    .processo-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+    .processo-desc { font-size: 15px; color: var(--slate); line-height: 1.6; }
+
+    /* ═══════════════════════════════════════
+       INVESTIMENTO
+    ═══════════════════════════════════════ */
+    .invest-wrap {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 48px;
+      align-items: start;
+    }
+    .invest-price {
+      font-family: var(--font-display);
+      font-size: clamp(56px, 8vw, 88px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .invest-price span { color: var(--teal-light); }
+    .invest-includes { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
+    .invest-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      color: rgba(255,255,255,.75);
+    }
+    .invest-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      flex-shrink: 0;
+    }
+    .invest-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+    }
+    .invest-card-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .invest-card-sub { font-size: 14px; color: rgba(255,255,255,.5); margin-bottom: 28px; }
+    .invest-vagas {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      background: rgba(232,168,56,.1);
+      border: 1px solid rgba(232,168,56,.25);
+      border-radius: var(--radius-sm);
+      margin-bottom: 24px;
+    }
+    .invest-vagas-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); flex-shrink: 0; }
+    .invest-vagas-text { font-size: 14px; color: var(--amber); font-weight: 600; }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    .footer {
+      background: var(--charcoal);
+      padding: 48px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,.35); line-height: 1.6; }
+    .footer-cred { font-size: 12px; color: rgba(255,255,255,.25); }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .pilares-grid { grid-template-columns: repeat(2, 1fr); }
+      .expert-grid { grid-template-columns: 1fr; }
+      .expert-img-wrap { max-width: 400px; aspect-ratio: 1/1; }
+      .selecao-grid { grid-template-columns: 1fr; }
+      .invest-wrap { grid-template-columns: 1fr; }
+      .processo-steps { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .pilares-grid { grid-template-columns: 1fr; }
+      .section { padding: 64px 0; }
+      .hero { padding: 72px 0 60px; }
+      .hero-cta-row { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body class="grain">
+
+<!-- ═══════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-wordmark" style="font-size:20px; color:#fff;">
+        GUIA-D<span class="logo-o">O<span class="logo-o-ring"></span></span>R
+      </div>
+      <span class="logo-tagline" style="font-size:7px;">INJECT THERAPY</span>
+    </a>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero">
+  <span class="orb hero-orb-1"></span>
+  <span class="orb hero-orb-2"></span>
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Coluna esquerda: texto -->
+      <div class="hero-text">
+        <h1 class="display-xl hero-title">
+          Formação Completa<br>
+          em <span>Injetáveis</span>
+        </h1>
+        <p class="hero-sub">Para fisioterapeutas que querem mais do que técnica.<br>Querem critério.</p>
+        <p class="hero-desc">
+          Esta formação não é aberta a qualquer profissional. Ela é destinada a fisioterapeutas que buscam atuar com injetáveis com critério, estrutura, segurança e responsabilidade clínica.
+        </p>
+        <div class="hero-cta-row">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOTAO6SFkD5i1wtaKILTogTlyvksp76FUuGVhmtwfuCDOEFQ/viewform"
+             target="_blank" class="btn btn-cta btn-lg">
+            Solicitar Aplicação →
+          </a>
+          <span class="hero-note">Vagas limitadas · Análise de perfil obrigatória</span>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">6</div>
+            <div class="hero-stat-label">Dias de imersão<br>presencial</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">12+</div>
+            <div class="hero-stat-label">Anos de prática<br>clínica do Dr. Ricardo</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">90</div>
+            <div class="hero-stat-label">Dias de suporte<br>pós-formação</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna direita: foto palco -->
+      <div class="hero-photo-wrap">
+        <img src="foto-palco.jpeg" alt="Dr. Ricardo Lazarotto palestrando">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     O QUE É A FORMAÇÃO
+═══════════════════════════════════════════ -->
+<section style="background:var(--teal);padding:40px 0;">
+  <div class="container">
+    <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start;justify-content:space-between;">
+      <div style="flex:1;min-width:280px;">
+        <p style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:10px;">O que é</p>
+        <p style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:#fff;line-height:1.4;">
+          Formação Hands-on em procedimentos injetáveis por infiltrações guiadas por ultrassom às cegas para fisioterapeutas.
+        </p>
+      </div>
+      <div style="flex:1;min-width:280px;">
+        <p style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:10px;">O que você aprende</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span style="background:rgba(255,255,255,.18);color:#fff;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;padding:6px 14px;border-radius:40px;">Ultrassom</span>
+          <span style="background:rgba(255,255,255,.18);color:#fff;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;padding:6px 14px;border-radius:40px;">Farmacologia</span>
+          <span style="background:rgba(255,255,255,.18);color:#fff;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;padding:6px 14px;border-radius:40px;">Ortomoleculares</span>
+          <span style="background:rgba(255,255,255,.18);color:#fff;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;padding:6px 14px;border-radius:40px;">Ortobiológicos</span>
+          <span style="background:rgba(255,255,255,.18);color:#fff;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;padding:6px 14px;border-radius:40px;">Semiologia Clínica</span>
+          <span style="background:rgba(255,255,255,.18);color:#fff;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;padding:6px 14px;border-radius:40px;">Avaliação de Exames de Sangue</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     POR QUE SELEÇÃO
+═══════════════════════════════════════════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="text-center" style="max-width:640px;margin:0 auto 56px;">
+      <span class="label text-teal-l">Por que existe processo de aplicação?</span>
+      <div class="divider divider-center"></div>
+      <h2 class="heading-1" style="color:var(--white);">Porque segurança clínica<br>não é superficial</h2>
+      <p class="body-lg" style="color:rgba(255,255,255,.6);margin-top:20px;">
+        A Formação Completa envolve neurofisiologia da dor, farmacologia aplicada, critério de indicação, supervisão com pacientes reais e construção de protocolos clínicos. Isso exige maturidade profissional, e um processo seletivo garante que todos os participantes estejam no mesmo nível de comprometimento.
+      </p>
+    </div>
+
+    <div class="selecao-grid">
+      <div class="selecao-box selecao-box-yes">
+        <p class="selecao-title" style="color:var(--teal-light);">✓ Esta formação é para você se</p>
+        <ul class="selecao-list">
+          <li><span class="dot-green"></span><span style="color:rgba(255,255,255,.8);">Atende dor musculoesquelética e quer ampliar resolução clínica</span></li>
+          <li><span class="dot-green"></span><span style="color:rgba(255,255,255,.8);">Busca diferenciação profissional com base em critério, não só técnica</span></li>
+          <li><span class="dot-green"></span><span style="color:rgba(255,255,255,.8);">Quer atuar com responsabilidade farmacológica e segurança jurídica</span></li>
+          <li><span class="dot-green"></span><span style="color:rgba(255,255,255,.8);">Está comprometido com evolução técnica estruturada e investimento sério</span></li>
+          <li><span class="dot-green"></span><span style="color:rgba(255,255,255,.8);">Deseja construir protocolos clínicos próprios e cobrar com convicção</span></li>
+        </ul>
+      </div>
+      <div class="selecao-box selecao-box-no">
+        <p class="selecao-title" style="color:rgba(255,255,255,.4);">✗ Esta formação não é para você se</p>
+        <ul class="selecao-list">
+          <li><span class="dot-muted"></span><span style="color:rgba(255,255,255,.4);">Procura apenas aprender uma técnica isolada de fim de semana</span></li>
+          <li><span class="dot-muted"></span><span style="color:rgba(255,255,255,.4);">Não tem intenção de aplicar injetáveis na prática clínica real</span></li>
+          <li><span class="dot-muted"></span><span style="color:rgba(255,255,255,.4);">Quer um certificado sem comprometimento com responsabilidade clínica</span></li>
+          <li><span class="dot-muted"></span><span style="color:rgba(255,255,255,.4);">Não está disposto a investir no desenvolvimento técnico estruturado</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     O PROGRAMA — 5 PILARES
+═══════════════════════════════════════════ -->
+<section class="section section-mid">
+  <div class="container">
+    <div class="programa-header">
+      <span class="label text-teal-l">O Programa</span>
+      <div class="divider"></div>
+      <h2 class="heading-1" style="color:var(--white);">Método GUIA-DOR: 5 Pilares</h2>
+      <p class="body-lg" style="color:rgba(255,255,255,.6);margin-top:16px;max-width:600px;">
+        Não é mais um curso de técnica. É uma formação que constrói raciocínio clínico do começo ao fim, para que a agulha seja consequência e não o ponto de partida.
+      </p>
+    </div>
+
+    <div class="pilares-grid">
+      <div class="pilar-card">
+        <div class="pilar-num">Pilar 01</div>
+        <div class="pilar-name">Dor com Lógica</div>
+        <div class="pilar-desc">Raciocínio clínico antes de qualquer aplicação. Por que essa dor? Qual o mecanismo?</div>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-num">Pilar 02</div>
+        <div class="pilar-name">Mapa de Causa</div>
+        <div class="pilar-desc">Identificação da fonte real da dor: estrutural, neural ou nociplástica. Sem tratar sintoma errado.</div>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-num">Pilar 03</div>
+        <div class="pilar-name">Segurança de Execução</div>
+        <div class="pilar-desc">Domínio técnico e farmacológico que elimina o medo de errar e cria certeza clínica.</div>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-num">Pilar 04</div>
+        <div class="pilar-name">Escolha Certa</div>
+        <div class="pilar-desc">Critério para selecionar o ativo certo por fenótipo: quando PRP, quando PRF, quando ozônio.</div>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-num">Pilar 05</div>
+        <div class="pilar-name">Protocolos que Vendem</div>
+        <div class="pilar-desc">Comunicação, precificação e fechamento. Sai sabendo cobrar com convicção e clareza.</div>
+      </div>
+    </div>
+
+    <!-- Módulos da imersão -->
+    <div style="margin-top:64px;position:relative;border-radius:var(--radius-xl);overflow:hidden;">
+      <!-- fundo clínico com overlay -->
+      <div style="position:absolute;inset:0;background-image:url('foto-clinica.jpeg');background-size:cover;background-position:center;opacity:.12;border-radius:var(--radius-xl);"></div>
+      <div style="position:relative;z-index:1;padding:40px 40px 8px;">
+      <h3 class="heading-2" style="color:var(--white);margin-bottom:8px;">Imersão Presencial: 6 Dias</h3>
+      <p class="body" style="color:rgba(255,255,255,.5);margin-bottom:40px;">Estruturada para desenvolver raciocínio, técnica e posicionamento profissional.</p>
+
+      <div class="modulos">
+        <div class="modulo-item">
+          <div class="modulo-num-wrap">
+            <div class="modulo-num">1</div>
+            <div class="modulo-line"></div>
+          </div>
+          <div class="modulo-content">
+            <span class="modulo-tag">Fundação Clínica</span>
+            <div class="modulo-title">Neurofisiologia da Dor Aplicada</div>
+            <div class="modulo-desc">Avaliação clínica e raciocínio diagnóstico. Fenótipos de dor: estrutural, neural, nociplástica. Quando indicar, quando contraindicar. Você aprende a pensar antes de aplicar.</div>
+          </div>
+        </div>
+        <div class="modulo-item">
+          <div class="modulo-num-wrap">
+            <div class="modulo-num">2</div>
+            <div class="modulo-line"></div>
+          </div>
+          <div class="modulo-content">
+            <span class="modulo-tag">Farmacologia</span>
+            <div class="modulo-title">Farmacologia Explorada</div>
+            <div class="modulo-desc">Procaína, lidocaína, curcumina, Traumeel, Zeel, ortomoleculares, corticóides. Critério de escolha por fenótipo, nunca mais trave na prescrição.</div>
+          </div>
+        </div>
+        <div class="modulo-item">
+          <div class="modulo-num-wrap">
+            <div class="modulo-num">3</div>
+            <div class="modulo-line"></div>
+          </div>
+          <div class="modulo-content">
+            <span class="modulo-tag">Técnica Supervisionada</span>
+            <div class="modulo-title">Execução com Supervisão Real</div>
+            <div class="modulo-desc">Intradermoterapia, mesoterapia, infiltração articular. Supervisão 100% direta do Dr. Ricardo com pacientes reais, não com manequins.</div>
+          </div>
+        </div>
+        <div class="modulo-item">
+          <div class="modulo-num-wrap">
+            <div class="modulo-num">4</div>
+            <div class="modulo-line"></div>
+          </div>
+          <div class="modulo-content">
+            <span class="modulo-tag">Ortobiológicos</span>
+            <div class="modulo-title">PRP, PRF e Ortobiológicos</div>
+            <div class="modulo-desc">Do preparo à aplicação de PRP, PRF e PRF-gel. Avaliação metabólica, manejo ortomolecular, protocolos por condição clínica.</div>
+          </div>
+        </div>
+        <div class="modulo-item">
+          <div class="modulo-num-wrap">
+            <div class="modulo-num">5</div>
+            <div class="modulo-line"></div>
+          </div>
+          <div class="modulo-content">
+            <span class="modulo-tag">Protocolos Clínicos</span>
+            <div class="modulo-title">Construção de Protocolos</div>
+            <div class="modulo-desc">Artrose, tendinites, bursites, epicondilites, coluna. Protocolo pronto para cada condição, compatível com o App GUIA-DOR que vai com você para cada atendimento.</div>
+          </div>
+        </div>
+        <div class="modulo-item">
+          <div class="modulo-num-wrap">
+            <div class="modulo-num">6</div>
+          </div>
+          <div class="modulo-content">
+            <span class="modulo-tag">Posicionamento</span>
+            <div class="modulo-title">Protocolos que Vendem</div>
+            <div class="modulo-desc">Como comunicar, precificar e fechar pacientes de injetáveis. O Pilar 5 do método: você sai sabendo cobrar com convicção porque tem clareza do protocolo.</div>
+          </div>
+        </div>
+      </div>
+      </div><!-- fecha padding-div da imersão -->
+    </div><!-- fecha módulos-wrap -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     EXPERT
+═══════════════════════════════════════════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="expert-grid">
+      <div>
+        <span class="label text-teal-l">Quem ensina</span>
+        <div class="divider"></div>
+        <h2 class="heading-1" style="color:var(--white);margin-bottom:20px;">Dr. Ricardo Lazarotto</h2>
+        <p class="body-lg" style="color:rgba(255,255,255,.65);margin-bottom:8px;">
+          Fisioterapeuta intervencionista com mais de 12 anos de prática clínica ativa em injetáveis musculoesqueléticos desde 2014, quando o mercado ainda não discutia o assunto.
+        </p>
+        <p class="body" style="color:rgba(255,255,255,.5);margin-bottom:32px;">
+          Criador do Método GUIA-DOR: a primeira formação que ensina o fisioterapeuta a pensar a dor antes de aplicar qualquer ativo. O diferencial que o mercado não tem.
+        </p>
+
+        <div class="expert-credentials">
+          <div class="expert-cred">
+            <div class="expert-cred-icon">🎓</div>
+            <div class="expert-cred-text">
+              <strong>Mestre em Ciências do Movimento Humano</strong>
+              Base científica sólida para cada protocolo ensinado
+            </div>
+          </div>
+          <div class="expert-cred">
+            <div class="expert-cred-icon">🏥</div>
+            <div class="expert-cred-text">
+              <strong>Professor de Pós-Graduação na Unoesc</strong>
+              Didática de professor, não de guru de palco
+            </div>
+          </div>
+          <div class="expert-cred">
+            <div class="expert-cred-icon">⚕️</div>
+            <div class="expert-cred-text">
+              <strong>CREFITO 150149-F · Verificável publicamente</strong>
+              Certificado dentro da Resolução COFFITO 516/2021
+            </div>
+          </div>
+          <div class="expert-cred">
+            <div class="expert-cred-icon">📍</div>
+            <div class="expert-cred-text">
+              <strong>Clínica Fisio Corpus, Pinhalzinho / SC</strong>
+              Santa Catarina
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="expert-img-wrap">
+          <img src="Dr Ricardo.jpeg"
+               alt="Dr. Ricardo Lazarotto" style="object-position:center top;">
+          <div class="expert-img-badge">
+            <p class="label" style="color:var(--teal-light);margin-bottom:6px;">Dr. Ricardo Lazarotto</p>
+            <p style="font-size:13px;color:rgba(255,255,255,.6);">Atuação com injetáveis desde 2014 · Criador do Método GUIA-DOR</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PROCESSO DE APLICAÇÃO
+═══════════════════════════════════════════ -->
+<section class="section section-frost">
+  <div class="container">
+    <div class="text-center" style="max-width:560px;margin:0 auto;">
+      <span class="label" style="color:var(--teal);">Processo Seletivo</span>
+      <div class="divider divider-center"></div>
+      <h2 class="heading-1">O que acontece após<br>a aplicação?</h2>
+      <p class="body-lg text-muted" style="margin-top:16px;">
+        Simples e transparente. Sem burocracia desnecessária.
+      </p>
+    </div>
+
+    <div class="processo-steps">
+      <div class="processo-card">
+        <div class="processo-num">01</div>
+        <div class="processo-title">Você preenche o formulário</div>
+        <div class="processo-desc">Algumas perguntas sobre sua atuação clínica atual, experiência com injetáveis e o que busca com a formação. Leva menos de 5 minutos.</div>
+      </div>
+      <div class="processo-card">
+        <div class="processo-num">02</div>
+        <div class="processo-title">Análise de perfil</div>
+        <div class="processo-desc">Sua experiência profissional e alinhamento com o perfil da formação são avaliados pela equipe GUIA-DOR. Você recebe retorno em até 48h.</div>
+      </div>
+      <div class="processo-card">
+        <div class="processo-num">03</div>
+        <div class="processo-title">Acesso à próxima turma</div>
+        <div class="processo-desc">Caso esteja alinhado ao perfil, você recebe todas as informações da próxima turma — datas, investimento e próximos passos para garantir sua vaga.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:48px;text-align:center;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOTAO6SFkD5i1wtaKILTogTlyvksp76FUuGVhmtwfuCDOEFQ/viewform"
+         target="_blank" class="btn btn-primary btn-lg">
+        Solicitar Aplicação →
+      </a>
+      <p style="margin-top:14px;font-size:13px;color:var(--slate);">
+        Vagas limitadas por turma para garantir qualidade no hands-on
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     INVESTIMENTO
+═══════════════════════════════════════════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="invest-wrap">
+      <div>
+        <span class="label text-teal-l">Investimento</span>
+        <div class="divider"></div>
+        <div class="invest-price">R$<span>13</span>.000</div>
+        <p class="body" style="color:rgba(255,255,255,.5);margin-top:8px;">Formação completa de 6 dias presenciais</p>
+
+        <div class="invest-includes">
+          <div class="invest-item"><span class="invest-dot"></span>6 dias de imersão presencial supervisionada</div>
+          <div class="invest-item"><span class="invest-dot"></span>Prática com pacientes reais e supervisão direta</div>
+          <div class="invest-item"><span class="invest-dot"></span>Acesso ao App GUIA-DOR com protocolos completos</div>
+          <div class="invest-item"><span class="invest-dot"></span>90 dias de suporte com Dr. Ricardo pós-formação</div>
+          <div class="invest-item"><span class="invest-dot"></span>Farmacologia aplicada em módulo dedicado</div>
+          <div class="invest-item"><span class="invest-dot"></span>Certificado com respaldo COFFITO 516/2021</div>
+          <div class="invest-item"><span class="invest-dot"></span>Posicionamento e precificação dos seus serviços</div>
+        </div>
+      </div>
+
+      <div class="invest-card">
+        <div class="invest-card-title">Solicitar Aplicação</div>
+        <div class="invest-card-sub">Processo seletivo · Análise de perfil em 48h</div>
+
+        <div class="invest-vagas">
+          <span class="invest-vagas-dot"></span>
+          <span class="invest-vagas-text">Vagas limitadas por turma</span>
+        </div>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOTAO6SFkD5i1wtaKILTogTlyvksp76FUuGVhmtwfuCDOEFQ/viewform"
+           target="_blank" class="btn btn-cta btn-full btn-lg" style="margin-bottom:16px;">
+          Quero me aplicar →
+        </a>
+
+        <p style="font-size:12px;color:rgba(255,255,255,.35);text-align:center;line-height:1.6;">
+          Uma sessão de PRP articular custa entre R$800 e R$3.000.<br>
+          Dois pacientes no primeiro mês já cobrem o investimento.
+        </p>
+
+        <div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);">
+          <p style="font-size:12px;color:rgba(255,255,255,.4);text-align:center;">
+            Dúvidas? WhatsApp direto com a equipe
+          </p>
+          <a href="https://wa.me/5549988019647?text=Quero%20saber%20mais%20sobre%20a%20Formação%20Completa"
+             target="_blank"
+             class="btn btn-outline btn-full"
+             style="margin-top:10px;font-size:13px;padding:12px;">
+            (49) 98801-9647
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CTA FINAL
+═══════════════════════════════════════════ -->
+<section style="position:relative;padding:100px 0;overflow:hidden;">
+  <!-- fundo com imagem + overlay navy -->
+  <div style="position:absolute;inset:0;background-image:url('foto-palco.jpeg');background-size:cover;background-position:center top;"></div>
+  <div style="position:absolute;inset:0;background:rgba(10,22,40,0.88);"></div>
+  <!-- conteúdo -->
+  <div class="container text-center" style="position:relative;z-index:2;max-width:640px;margin:0 auto;">
+    <span class="label text-teal-l">Pronto para o próximo nível?</span>
+    <div class="divider divider-center"></div>
+    <h2 class="heading-1" style="color:var(--white);margin-bottom:20px;">
+      Segurança não é coragem.<br>
+      <span style="color:var(--teal-light);">É protocolo, critério e treino supervisionado.</span>
+    </h2>
+    <p class="body-lg" style="color:rgba(255,255,255,.6);margin-bottom:40px;">
+      Se você chegou até aqui, provavelmente já sabe que falta mais do que prática. Falta processo. O GUIA-DOR é esse processo.
+    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOTAO6SFkD5i1wtaKILTogTlyvksp76FUuGVhmtwfuCDOEFQ/viewform"
+       target="_blank" class="btn btn-cta btn-lg">
+      Solicitar Aplicação →
+    </a>
+    <p style="margin-top:16px;font-size:13px;color:rgba(255,255,255,.35);">
+      CREFITO 150149-F · Resolução COFFITO 516/2021 · Pinhalzinho, SC
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <a href="#" class="logo" style="margin-bottom:10px;display:inline-flex;">
+          <div class="logo-wordmark" style="font-size:18px;color:#fff;">
+            GUIA-D<span class="logo-o">O<span class="logo-o-ring"></span></span>R
+          </div>
+        </a>
+        <p class="footer-copy">
+          Formação Completa em Injetáveis, Dr. Ricardo Lazarotto<br>
+          Clínica Fisio Corpus · Pinhalzinho, SC · (49) 99158-9749
+        </p>
+      </div>
+      <p class="footer-cred">
+        CREFITO 150149-F · Resolução COFFITO 516/2021<br>
+        © 2026 GUIA-DOR Inject Therapy. Todos os direitos reservados.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
